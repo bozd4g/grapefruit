@@ -8,6 +8,8 @@ All lacks will `update` soon.
 ## Clone & Download
 ``` 
 git clone https://github.com/bozd4g/grapefruit.git grapefruit
+cd grapefruit
+npm run build
 ```
 
 ## Interface
