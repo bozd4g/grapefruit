@@ -1,5 +1,5 @@
 module.exports = {
-    entry: ['./app/main.js'],
+    entry: ['./App/main.js'],
     output: {
         filename: 'bundle.js'
     },
@@ -9,14 +9,17 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: "babel-loader"
-            }, {
+            }, 
+            {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: "babel-loader"
+            },
+            {
+                test: /\.css$/,  
+                exclude: /node_modules/,  
+                loaders: ['style-loader', 'css-loader'],
             }
-        ],
-        loaders: [
-            { test: /\.css$/, loader: "style-loader!css-loader" }
         ]
     },
     devServer: {

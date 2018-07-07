@@ -10,7 +10,7 @@ export default class Content extends React.Component {
     render() {
         return(
             <div>
-                <Container backgroundColor={this.props.backgroundColor}>
+                <Container backgroundColor={global.primaryColor}>
                 
                 </Container>
             </div>
