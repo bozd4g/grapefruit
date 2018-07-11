@@ -6,13 +6,10 @@ export default class Content extends React.Component {
     constructor(props) {
         super(props);
     }
-
     render() {
         return(
-            <div>
-                <Container backgroundColor={global.primaryColor}>
-                
-                </Container>
+            <div style={{backgroundColor: global.primaryColor, height: '100%'}}>
+            what's happening?
             </div>
         );
     }
