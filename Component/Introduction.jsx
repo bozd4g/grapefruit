@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from '../Component/Container.jsx';
+import Wrapper from '../Component/Wrapper.jsx';
 import '../css/main.css';
 
 export default class Introduction extends React.Component {
@@ -14,10 +15,11 @@ export default class Introduction extends React.Component {
                         <div className='logoInner'>
                             <a href='#introduction'><p>fb</p></a>
                         </div>
-                    </div>
+                </div>
                 <div className='header'>
                     <a href='#contact' onClick={() => this.props.contactClickEvent()}>contact</a>
                 </div>
+                <Wrapper></Wrapper>
             </div>
         );
     }

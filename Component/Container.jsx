@@ -28,7 +28,7 @@ export default class Container extends React.Component {
                     <Content title="what's happening?" color='white'></Content>
                 </div>
                 <div id='contact' style={container} ref={(div) => {this.lastSide = div;}}>
-                    <Last title='contact' color='#474747'></Last>
+                    <Last title='contact' color='#757575'></Last>
                 </div>
             </div>
         );

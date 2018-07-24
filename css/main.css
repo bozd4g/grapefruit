@@ -33,6 +33,7 @@ a {
     transform: rotate(45deg);
     transform-origin: 0 100%;
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.19);
+    z-index: 999;
 }
 
 .logo .logoInner {
@@ -74,7 +75,7 @@ a {
 
 .header a {
     display: block;
-    color: #474747;
+    color: #757575;
     font-size: 3em;
     margin: 0;
     padding: 0;
