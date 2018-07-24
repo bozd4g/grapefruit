@@ -13,4 +13,17 @@
     <script type="text/javascript" src="bundle.js"></script>
     <script type="text/babel" src="./App/main.js"></script>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $("a[href^='#']").click(function(e) {
+	e.preventDefault();
+	
+	var position = $($(this).attr("href")).offset().top;
+
+	$("body, html").animate({
+		scrollTop: position
+	}, 750);
+});
+</script>
 </html>

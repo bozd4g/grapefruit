@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../Component/Container.jsx'
+import Title from '../Component/Title.jsx';
 
 
 export default class Last extends React.Component {
@@ -9,8 +9,8 @@ export default class Last extends React.Component {
 
     render() {
         return(
-            <div style={{backgroundColor: global.windowBackgrounColor, height: '100%'}}>
-            contact me   
+            <div className='footer' style={{backgroundColor: global.windowBackgrounColor, height: '100%'}}>
+                <Title color={this.props.color} title={this.props.title}/> 
             </div>
         );
     }
