@@ -13,7 +13,7 @@ export default class Wrapper extends React.Component {
                 <Row>
                     <Col xs={12}>
                         <Row center='xs'>
-                            <Col xs={6}>
+                            <Col xs={7}>
                                 <section className='wrapper'>
                                     <h1>hey!<br />I'm
                                     <div class="verticalFlip">

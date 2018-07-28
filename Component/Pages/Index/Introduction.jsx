@@ -1,7 +1,6 @@
 import React from 'react';
-import Container from '../Component/Container.jsx';
-import Wrapper from '../Component/Wrapper.jsx';
-import '../css/main.css';
+import Wrapper from '../../Wrapper.jsx';
+import '../../../css/main.css';
 
 export default class Introduction extends React.Component {
     constructor(props) {
@@ -19,7 +18,7 @@ export default class Introduction extends React.Component {
                 <div className='header'>
                     <a href='#contact' onClick={() => this.props.contactClickEvent()}>contact</a>
                 </div>
-                <Wrapper></Wrapper>
+                <Wrapper />
             </div>
         );
     }

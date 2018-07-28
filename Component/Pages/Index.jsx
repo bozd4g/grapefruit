@@ -1,9 +1,9 @@
 import React from 'react';
-import Introduction from '../Component/Introduction.jsx';
-import Content from '../Component/Content.jsx';
-import Last from '../Component/Last.jsx';
+import Introduction from '../Pages/Index/Introduction.jsx';
+import Content from '../Pages/Index/Content.jsx';
+import Last from '../Pages/Index/Last.jsx';
 
-export default class Container extends React.Component {
+export default class Index extends React.Component {
 
     constructor(props) {
         super(props);

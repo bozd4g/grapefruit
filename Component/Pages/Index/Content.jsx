@@ -1,6 +1,6 @@
 import React from 'react';
-import Title from '../Component/Title.jsx';
-import '../css/main.css';
+import Title from '../../Title.jsx';
+import '../../../css/main.css';
 
 
 export default class Content extends React.Component {
