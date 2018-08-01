@@ -28,7 +28,7 @@ a {
     position: fixed;
     left: 10%;
     height: 120px;
-    widows: 120px;
+    width: 120px;
     background-color: #ffbd39;
     transform: rotate(45deg);
     transform-origin: 0 100%;
@@ -96,17 +96,114 @@ a {
     font-family: 'Montserrat', sans-serif;
     margin-left: 10%;
     margin-top: 10%;
+    max-width: 50%;
 }
+
+.diamond{
+    height: 75px;
+    width: 75px;
+    background-color: white;
+    transform: rotate(45deg);
+    transform-origin: 0 100%;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.19);
+}
+
+.diamond .diamondInner {
+    height: 75px;
+    width: 75px;
+    transform: rotate(-45deg);
+}
+
+.diamond .diamondInner a {
+    color: #757575;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.diamond:hover {
+    color: #ffbd39;
+    transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.icon {
+    color: #757575;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.25);
+}
+
+.icon.default:hover {
+    color: #ffbd39;
+}
+
+.icon.facebook:hover {
+    color: #3B5998;
+  }
+
+  .icon.instagram:hover {
+    color: #8a3ab9;
+  }
+  
+.icon.twitter:hover {
+    color: #1dcaff;
+  }
+.icon.linkedin:hover {
+    color: #007bb5;
+  }
+.icon.medium:hover {
+    color: #02b875;
+  }
+.icon.spotify:hover {
+    color: #1ed760;
+  }
+.icon.github:hover {
+    color: #333;
+  }
 
 .footer {
     background: url(/App/img/world-map.png);
     width: 100%;
     height: 100%;
-    z-index: -1;
     background-size: 50%;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.footerContact {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+}
+
+.footerContact .inner {
+    padding: 0 5%;
+}
+
+.footerContact .inner .email {
+    float: left;
+    text-align: left;
+} 
+
+.footerContact .inner .social {
+    float: right;
+    text-align: right;
+    margin-top: 4%;
 }
 
 .copyright {

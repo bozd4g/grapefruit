@@ -28,7 +28,7 @@ export default class Index extends React.Component {
                     <Content title="what's happening?" color='white'></Content>
                 </div>
                 <div id='contact' style={container} ref={(div) => {this.lastSide = div;}}>
-                    <Last title='contact' color='#757575'></Last>
+                    <Last title='contact with me.' color='#757575'></Last>
                 </div>
             </div>
         );
