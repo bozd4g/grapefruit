@@ -1,9 +1,9 @@
 import React from 'react';
 import Title from '../../Title.jsx';
 import { Row, Col } from 'react-flexbox-grid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faInstagram, faTwitter, faMedium, faLinkedin, faSpotify, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faTwitter, faMedium, faLinkedin, faSpotify, faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../../../css/main.css';
 
 
@@ -41,7 +41,8 @@ export default class Last extends React.Component {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xs={5} className='social'>
+                                    
+                                    <Col xs={6} className='social'>
                                         <Row>
                                             <Col xs className='icon'>
                                                 <a href='https://www.facebook.com/bozd4g/' alt='facebook' target='_blank'>
@@ -91,7 +92,7 @@ export default class Last extends React.Component {
                     <Row>
                         <Col xs={12}>
                             <Row center='xs'>
-                                <Col xs={6}>
+                                <Col xs={6} style={{color: '#757575'}}>
                                     © copyright {this.state.currentYear} | all rights reserved
                                 </Col>
                             </Row>

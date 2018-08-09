@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
@@ -214,4 +214,71 @@ a {
     background: #e5e5e5;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+}
+
+.post{
+    padding: 5% 5% 0 10%;
+}
+
+.post .date{
+    text-align: right;
+    padding-right: 4%;
+}
+
+.post .date p {
+    display: block;
+    color: #ffebc3;
+    font-size: 1.6em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.post .body {
+    width: 100%;
+    padding: 4% 30px;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 4vh;
+}
+
+.post .body a {
+    display: block;
+    color: #757575;
+    font-size: 1.8em;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post .body a:hover{
+    color: #ffbd39;
+}
+
+.viewAll {
+    padding: 1.25vh 0;
+    text-align: center;
+}
+
+.viewAll .text{
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.viewAll .text a {
+    color: #333;
+    font-size: 1em;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.viewAll .arrow a{
+    padding-left: 10px;
+    color: #333;
+    margin-top: auto;
+    margin-bottom: auto;
 }
