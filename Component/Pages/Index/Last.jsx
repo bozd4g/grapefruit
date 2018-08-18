@@ -4,6 +4,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter, faMedium, faLinkedin, faSpotify, faGithub } from '@fortawesome/free-brands-svg-icons';
+import Diamond from '../../Diamond.jsx';
 import '../../../css/main.css';
 
 
@@ -33,16 +34,16 @@ export default class Last extends React.Component {
                         <Row>
                             <Col xs={12}>
                                 <Row>
-                                    <Col xs={6} className='email'>
-                                        <div className='diamond' onClick={() => { this.props.logoClickEvent() }}>
-                                            <div className='diamondInner'>
-                                                <a href='mailto:me@furkanbozdag.com'><FontAwesomeIcon className='icon default' icon={faEnvelope}
-                                                    size='2x'></FontAwesomeIcon></a>
-                                            </div>
-                                        </div>
+                                    <Col xs={8} className='email'>
+                                        <Diamond redirect='mailto:me@furkanbozdag.com'
+                                            height='80px'
+                                            width='80px'
+                                            backgroundColor='white'
+                                            color='#757575'
+                                            icon={faEnvelope}/>
                                     </Col>
                                     
-                                    <Col xs={6} className='social'>
+                                    <Col xs={4} className='social'>
                                         <Row>
                                             <Col xs className='icon'>
                                                 <a href='https://www.facebook.com/bozd4g/' alt='facebook' target='_blank'>

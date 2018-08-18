@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,700');
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
 
 .wrapperMain {
 	height: auto;
     top: 50%;
     margin: 0 auto;
     position: relative;
-    transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .wrapperMain h1 {
@@ -28,12 +33,12 @@
     font-weight: 500;
 	margin-top: 10%;
 	text-align: left;
-	font-size: 1.38em;
+	font-size: 1.5em;
 }
 
 .wrapperMain p b {
 	color: #474747;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .wrapperMain p a {

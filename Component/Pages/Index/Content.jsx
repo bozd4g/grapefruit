@@ -67,7 +67,7 @@ export default class Content extends React.Component {
     render() {
         const mediumLink = 'https://www.medium.com/@bozd4g/';
         return (
-            <div style={{ backgroundColor: global.primaryColor, height: '100%' }}>
+            <div style={{ backgroundColor: global.primaryColor, height: '100%', width: '100%' }}>
                 <Title color={this.props.color} title={this.props.title} />
 
                 <div id='lastPosts' className='post'>

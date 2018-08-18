@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
 import '../css/wrapper.css';
+import MediaQuery from 'react-responsive';
 
 export default class Wrapper extends React.Component {
     constructor(props) {
@@ -14,9 +15,10 @@ export default class Wrapper extends React.Component {
                     <Col xs={12}>
                         <Row center='xs'>
                             <Col xs={7}>
+                            <MediaQuery query="(min-width: 900px)">
                                 <section className='wrapper'>
                                     <h1>hey!<br />I'm
-                                    <div class="verticalFlip">
+                                        <div class="verticalFlip">
                                             <span>furkan.</span>
                                             <span>developer.</span>
                                             <span>minimalist.</span>
@@ -25,7 +27,8 @@ export default class Wrapper extends React.Component {
                                         </div>
                                     </h1>
                                 </section>
-                                <p>I'm <b><a>designing</a></b> as hobby, <b><a>coding</a></b> as lovely and sometimes <b><a>writing</a></b> something at somewhere like <b><a href="https://github.com/bozd4g" target="_blank">github</a></b>, <b><a href="https://twitter.com/bozd4g" target="_blank">twitter</a></b> and <b><a href="https://medium.com/@bozd4g" target="_blank">medium</a></b>.</p>
+                            </MediaQuery>
+                            <p>I'm <b><a>designing</a></b> as hobby, <b><a>coding</a></b> as lovely and sometimes <b><a>writing</a></b> something at somewhere like <b><a href="https://github.com/bozd4g" target="_blank">github</a></b>, <b><a href="https://twitter.com/bozd4g" target="_blank">twitter</a></b> and <b><a href="https://medium.com/@bozd4g" target="_blank">medium</a></b>.</p>
                             </Col>
                         </Row>
                     </Col>

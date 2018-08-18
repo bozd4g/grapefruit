@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack-dev-server"
   },
+  "homepage": "https://blog-395f6.firebaseapp.com/",
   "author": "bozd4g",
   "license": "ISC",
   "dependencies": {
@@ -13,6 +14,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
     "@fortawesome/react-fontawesome": "0.1.0-11",
+    "axios": "^0.18.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
@@ -21,6 +23,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-flexbox-grid": "^2.1.2",
+    "react-responsive": "^5.0.0",
     "webpack-dev-server": "^3.1.4"
   },
   "devDependencies": {

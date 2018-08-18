@@ -20,14 +20,12 @@ export default class Index extends React.Component {
         return(
             <div>
                 <div id='introduction' style={container}>
-                    <Introduction logoClickEvent={this.onLogoClicked} 
-                                  contactClickEvent={this.onContactClicked}>
-                    </Introduction>
+                    <Introduction/>
                 </div>
                 <div id='content' style={container}>
                     <Content title="what's happening?" color='white'></Content>
                 </div>
-                <div id='contact' style={container} ref={(div) => {this.lastSide = div;}}>
+                <div id='contact' style={container}>
                     <Last title='contact with me.' color='#757575'></Last>
                 </div>
             </div>
