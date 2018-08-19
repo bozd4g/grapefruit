@@ -15,7 +15,7 @@ export default class Wrapper extends React.Component {
                     <Col xs={12}>
                         <Row center='xs'>
                             <Col xs={7}>
-                            <MediaQuery query="(min-width: 900px)">
+                            <MediaQuery query={global.minWidth}>
                                 <section className='wrapper'>
                                     <h1>hey!<br />I'm
                                         <div class="verticalFlip">

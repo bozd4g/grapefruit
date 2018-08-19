@@ -17,7 +17,7 @@ export default class Introduction extends React.Component {
 
         return(
             <div className='introduction'>
-                <MediaQuery query="(min-width: 900px)">
+                <MediaQuery query={global.minWidth}>
                     <Diamond redirect='#introduction'
                         position='fixed'
                         text='fb'
@@ -25,7 +25,7 @@ export default class Introduction extends React.Component {
                         width='120px'
                         fontSize='40px'/>
                 </MediaQuery>
-                <MediaQuery query="(max-width: 900px)">
+                <MediaQuery query={global.maxWidth}>
                     <Diamond redirect='#introduction'
                         position='fixed'
                         text='fb'
@@ -35,10 +35,10 @@ export default class Introduction extends React.Component {
                 </MediaQuery>
 
                 <div className='header'>
-                    <MediaQuery query="(min-width: 900px)">
+                    <MediaQuery query={global.minWidth}>
                         <a href='#contact'>contact</a>
                     </MediaQuery>
-                    <MediaQuery query="(max-width: 900px)">
+                    <MediaQuery query={global.maxWidth}>
                         <a style={mobileHeader} href='#contact'>contact</a>
                     </MediaQuery>
                 </div>

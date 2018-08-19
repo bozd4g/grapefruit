@@ -1,10 +1,11 @@
 import React from 'react';
 import Title from '../../Title.jsx';
 import { Row, Col } from 'react-flexbox-grid';
-import '../../../css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import MediaQuery from 'react-responsive';
+import '../../../css/main.css';
 
 export default class Content extends React.Component {
     constructor(props) {
@@ -39,6 +40,17 @@ export default class Content extends React.Component {
     }
 
     getLastPosts(d) {
+        const mobileBody = {
+            marginTop: '2vh',
+            marginBottom: '2.5vh',
+            padding: '3vh 15px'
+        };
+        const mobileText = {
+            fontSize: '1.25em',
+            whiteSpace: 'unset',
+            maxHeight: 2 * 25 // lineCount * lineHeight
+        };
+
         const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sept', 'oct', 'nov', 'dec'];
         var rows = [];
         for (var i = 0; i < 3; i++) {
@@ -47,14 +59,24 @@ export default class Content extends React.Component {
 
             rows.push(
                 <Row>
-                    <Col xs={1} className='date'>
-                        <p>{date.getDate()}<br/>{months[date.getMonth()]}</p>
-                    </Col>
-                    <Col xs={11}>
-                        <Row className='body'>
-                            <a href={link} target='_blank'>{this.replaceAll(d[i].title, '&amp', '&')}</a>
+                    <MediaQuery query={global.minWidth}>
+                        <Col xs={1} className='date'>
+                            <p>{date.getDate()}<br/>{months[date.getMonth()]}</p>
+                        </Col>
+                        <Col xs={11}>
+                            <Row className='body'>
+                                <a href={link} target='_blank'>{this.replaceAll(d[i].title, '&amp', '&')}</a>
+                            </Row>
+                        </Col>
+                    </MediaQuery>
+                    <MediaQuery query={global.maxWidth}>
+                        <Row className='date'>
+                            <p style={mobileText}>{date.getDate()} {months[date.getMonth()]}</p>
                         </Row>
-                    </Col>
+                        <Row className='body' style={mobileBody}>
+                            <a style={mobileText} href={link} target='_blank'>{this.replaceAll(d[i].title, '&amp', '&')}</a>
+                        </Row>
+                    </MediaQuery>
                 </Row>
             );
         }
@@ -66,13 +88,26 @@ export default class Content extends React.Component {
 
     render() {
         const mediumLink = 'https://www.medium.com/@bozd4g/';
+        const mobilePost = {
+            boxSizing: 'border-box',
+            margin: '0 3%',
+            marginTop: '5%'
+        }
+        
         return (
             <div style={{ backgroundColor: global.primaryColor, height: '100%', width: '100%' }}>
                 <Title color={this.props.color} title={this.props.title} />
 
-                <div id='lastPosts' className='post'>
-                    {this.state.posts}
-                </div>
+                <MediaQuery query={global.minWidth}>
+                    <div id='lastPosts' className='post'>
+                        {this.state.posts}
+                    </div>
+                </MediaQuery>
+                <MediaQuery query={global.maxWidth}>
+                    <div id='lastPosts' className='post' style={mobilePost}>
+                        {this.state.posts}
+                    </div>
+                </MediaQuery>
 
                 <Row className='viewAll'>
                     <Col xs={12}>

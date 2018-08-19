@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter, faMedium, faLinkedin, faSpotify, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Diamond from '../../Diamond.jsx';
+import MediaQuery from 'react-responsive';
 import '../../../css/main.css';
 
 
@@ -34,54 +35,102 @@ export default class Last extends React.Component {
                         <Row>
                             <Col xs={12}>
                                 <Row>
-                                    <Col xs={8} className='email'>
-                                        <Diamond redirect='mailto:me@furkanbozdag.com'
-                                            height='80px'
-                                            width='80px'
-                                            backgroundColor='white'
-                                            color='#757575'
-                                            icon={faEnvelope}/>
-                                    </Col>
-                                    
-                                    <Col xs={4} className='social'>
-                                        <Row>
-                                            <Col xs className='icon'>
-                                                <a href='https://www.facebook.com/bozd4g/' alt='facebook' target='_blank'>
-                                                    <FontAwesomeIcon className='icon facebook' icon={faFacebook} size='3x' />
-                                                </a>
-                                            </Col>
-                                            <Col xs className='icon'>
-                                                <a href='https://www.instagram.com/bozd4g/' alt='instagram' target='_blank'>
-                                                    <FontAwesomeIcon className='icon instagram' icon={faInstagram} size='3x' />
-                                                </a>
-                                            </Col>
-                                            <Col xs className='icon'>
-                                                <a href='https://www.twitter.com/bozd4g/' alt='twitter' target='_blank'>
-                                                    <FontAwesomeIcon className='icon twitter' icon={faTwitter} size='3x' />
-                                                </a>
-                                            </Col>
-                                            <Col xs className='icon'>
-                                                <a href='https://www.medium.com/@bozd4g/' alt='medium' target='_blank'>
-                                                    <FontAwesomeIcon className='icon medium' icon={faMedium} size='3x' />
-                                                </a>
-                                            </Col>
-                                            <Col xs className='icon'>
-                                                <a href='https://www.linkedin.com/in/bozd4g/' alt='linkedin' target='_blank'>
-                                                    <FontAwesomeIcon className='icon linkedin' icon={faLinkedin} size='3x' />
-                                                </a>
-                                            </Col>
-                                            <Col xs className='icon'>
-                                                <a href='https://open.spotify.com/user/bozd4g/' alt='spotify' target='_blank'>
-                                                    <FontAwesomeIcon className='icon spotify' icon={faSpotify} size='3x' />
-                                                </a>
-                                            </Col>
-                                            <Col xs className='icon'>
-                                                <a href='http://www.github.com/bozd4g/' alt='github' target='_blank'>
-                                                    <FontAwesomeIcon className='icon github' icon={faGithub} size='3x' />
-                                                </a>
-                                            </Col>
-                                        </Row>
-                                    </Col>
+                                    <MediaQuery query={global.minWidth}>
+                                        <Col xs={8} className='email'>
+                                            <Diamond redirect='mailto:me@furkanbozdag.com'
+                                                height='80px'
+                                                width='80px'
+                                                backgroundColor='white'
+                                                color='#757575'
+                                                icon={faEnvelope}/>
+                                        </Col>
+
+                                        <Col xs={4} className='social'>
+                                            <Row>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.facebook.com/bozd4g/' alt='facebook' target='_blank'>
+                                                        <FontAwesomeIcon className='icon facebook' icon={faFacebook} size='3x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.instagram.com/bozd4g/' alt='instagram' target='_blank'>
+                                                        <FontAwesomeIcon className='icon instagram' icon={faInstagram} size='3x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.twitter.com/bozd4g/' alt='twitter' target='_blank'>
+                                                        <FontAwesomeIcon className='icon twitter' icon={faTwitter} size='3x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.medium.com/@bozd4g/' alt='medium' target='_blank'>
+                                                        <FontAwesomeIcon className='icon medium' icon={faMedium} size='3x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.linkedin.com/in/bozd4g/' alt='linkedin' target='_blank'>
+                                                        <FontAwesomeIcon className='icon linkedin' icon={faLinkedin} size='3x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://open.spotify.com/user/bozd4g/' alt='spotify' target='_blank'>
+                                                        <FontAwesomeIcon className='icon spotify' icon={faSpotify} size='3x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='http://www.github.com/bozd4g/' alt='github' target='_blank'>
+                                                        <FontAwesomeIcon className='icon github' icon={faGithub} size='3x' />
+                                                    </a>
+                                                </Col>
+                                            </Row>
+                                        </Col>
+                                    </MediaQuery>
+                                    <MediaQuery query={global.maxWidth}>
+                                        <Col xs={12}>
+                                            <Row center='xs'>
+                                                <Col xs className='icon'>
+                                                    <a href='mailto:me@furkanbozdag.com' alt='email' target='_blank'>
+                                                        <FontAwesomeIcon className='icon facebook' icon={faEnvelope} size='2x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.facebook.com/bozd4g/' alt='facebook' target='_blank'>
+                                                        <FontAwesomeIcon className='icon facebook' icon={faFacebook} size='2x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.instagram.com/bozd4g/' alt='instagram' target='_blank'>
+                                                        <FontAwesomeIcon className='icon instagram' icon={faInstagram} size='2x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.twitter.com/bozd4g/' alt='twitter' target='_blank'>
+                                                        <FontAwesomeIcon className='icon twitter' icon={faTwitter} size='2x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.medium.com/@bozd4g/' alt='medium' target='_blank'>
+                                                        <FontAwesomeIcon className='icon medium' icon={faMedium} size='2x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://www.linkedin.com/in/bozd4g/' alt='linkedin' target='_blank'>
+                                                        <FontAwesomeIcon className='icon linkedin' icon={faLinkedin} size='2x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='https://open.spotify.com/user/bozd4g/' alt='spotify' target='_blank'>
+                                                        <FontAwesomeIcon className='icon spotify' icon={faSpotify} size='2x' />
+                                                    </a>
+                                                </Col>
+                                                <Col xs className='icon'>
+                                                    <a href='http://www.github.com/bozd4g/' alt='github' target='_blank'>
+                                                        <FontAwesomeIcon className='icon github' icon={faGithub} size='2x' />
+                                                    </a>
+                                                </Col>
+                                            </Row>
+                                        </Col>
+                                    </MediaQuery>
                                 </Row>
                             </Col>
                         </Row>
@@ -93,9 +142,16 @@ export default class Last extends React.Component {
                     <Row>
                         <Col xs={12}>
                             <Row center='xs'>
-                                <Col xs={6} style={{color: '#757575'}}>
-                                    © copyright {this.state.currentYear} | all rights reserved
-                                </Col>
+                                <MediaQuery query={global.minWidth}>
+                                    <Col xs={6} style={{color: '#757575'}}>
+                                        © copyright {this.state.currentYear} | all rights reserved
+                                    </Col>
+                                </MediaQuery>
+                                <MediaQuery query={global.maxWidth}>
+                                    <Col xs={6} style={{color: '#757575'}}>
+                                        © copyright {this.state.currentYear}<br/>all rights reserved
+                                    </Col>
+                                </MediaQuery>
                             </Row>
                         </Col>
                     </Row>
