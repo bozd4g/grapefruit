@@ -1,5 +1,5 @@
 # grapefruit React.js project
-This repository is a project I made as a hobby. I'm developing using with React.js and Node.js.<br/>
+This repository is a project I made as a hobby. I'm developing using with React.js.<br/>
 All lacks will `update` soon.
 
 [![HitCount](http://hits.dwyl.io/bozd4g/grapefruit.svg)](http://hits.dwyl.io/bozd4g/grapefruit)

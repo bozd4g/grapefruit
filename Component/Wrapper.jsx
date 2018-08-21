@@ -18,12 +18,12 @@ export default class Wrapper extends React.Component {
                             <MediaQuery query={global.minWidth}>
                                 <section className='wrapper'>
                                     <h1>hey!<br />I'm
-                                        <div class="verticalFlip">
+                                        <div className="verticalFlip">
                                             <span>furkan.</span>
-                                            <span>developer.</span>
-                                            <span>minimalist.</span>
-                                            <span>designer.</span>
-                                            <span>coder.</span>
+                                            <span>a developer.</span>
+                                            <span>a designer.</span>
+                                            <span>a coder.</span>
+                                            <span>just human.</span>
                                         </div>
                                     </h1>
                                 </section>

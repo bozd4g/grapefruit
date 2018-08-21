@@ -13,7 +13,7 @@ export default class Content extends React.Component {
         
         this.state = {
             status: false,
-            posts: []
+            posts: null
         }
     }
 
@@ -21,14 +21,12 @@ export default class Content extends React.Component {
         var data = null;
         axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40bozd4g')
             .then(res => {
-                data = res.data.items;
-
-                if(data == null) {
+                if(res.data.items == null) {
                     alert("Posts is not found!");
                     return;
                 }    
                 
-                this.getLastPosts(data.filter(function(e) {
+                this.bindLastPosts(res.data.items.filter(function(e) {
                     return e.categories.length > 0
                 }));
             })
@@ -39,7 +37,7 @@ export default class Content extends React.Component {
         return s.replace(re,replaceTo);
     }
 
-    getLastPosts(d) {
+    bindLastPosts(d) {
         const mobileBody = {
             marginTop: '2vh',
             marginBottom: '2.5vh',
@@ -58,7 +56,7 @@ export default class Content extends React.Component {
             var date = new Date(d[i].pubDate);
 
             rows.push(
-                <Row>
+                <Row key={i}>
                     <MediaQuery query={global.minWidth}>
                         <Col xs={1} className='date'>
                             <p>{date.getDate()}<br/>{months[date.getMonth()]}</p>
@@ -99,12 +97,12 @@ export default class Content extends React.Component {
                 <Title color={this.props.color} title={this.props.title} />
 
                 <MediaQuery query={global.minWidth}>
-                    <div id='lastPosts' className='post'>
+                    <div className='post'>
                         {this.state.posts}
                     </div>
                 </MediaQuery>
                 <MediaQuery query={global.maxWidth}>
-                    <div id='lastPosts' className='post' style={mobilePost}>
+                    <div className='post' style={mobilePost}>
                         {this.state.posts}
                     </div>
                 </MediaQuery>

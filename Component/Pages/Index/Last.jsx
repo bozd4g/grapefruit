@@ -36,7 +36,7 @@ export default class Last extends React.Component {
                             <Col xs={12}>
                                 <Row>
                                     <MediaQuery query={global.minWidth}>
-                                        <Col xs={8} className='email'>
+                                        <Col xs={7} className='email'>
                                             <Diamond redirect='mailto:me@furkanbozdag.com'
                                                 height='80px'
                                                 width='80px'
@@ -45,7 +45,7 @@ export default class Last extends React.Component {
                                                 icon={faEnvelope}/>
                                         </Col>
 
-                                        <Col xs={4} className='social'>
+                                        <Col xs={5} className='social'>
                                             <Row>
                                                 <Col xs className='icon'>
                                                     <a href='https://www.facebook.com/bozd4g/' alt='facebook' target='_blank'>
