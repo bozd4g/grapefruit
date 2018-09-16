@@ -10,7 +10,7 @@ import '../../../css/main.css';
 export default class Content extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             status: false,
             posts: null
@@ -18,23 +18,40 @@ export default class Content extends React.Component {
     }
 
     componentDidMount() {
-        var data = null;
-        axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40bozd4g')
-            .then(res => {
-                if(res.data.items == null) {
-                    alert("Posts is not found!");
-                    return;
-                }    
-                
-                this.bindLastPosts(res.data.items.filter(function(e) {
-                    return e.categories.length > 0
-                }));
-            })
+        const lastCacheDate = localStorage.getItem('lastCacheDate');
+        if(lastCacheDate != null) {
+            const dateDiff = Math.round(Math.abs((new Date(lastCacheDate).getTime() - new Date().getTime()) / (24 * 3600 * 1000)));
+            if(dateDiff >= 7)
+                localStorage.clear();
+        }
+        
+        var data = JSON.parse(localStorage.getItem('cacheData'));
+        if (data == null) {
+            axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40bozd4g')
+                .then(res => {
+                    if (res.data.items == null) {
+                        alert("Posts is not found!");
+                        return;
+                    }
+
+                    localStorage.setItem('lastCacheDate', new Date());
+                    localStorage.setItem('cacheData', JSON.stringify(res.data));
+                    this.bindLastPosts(res.data.items.filter(function (e) {
+                        return e.categories.length > 0
+                    }));
+                })
+        }
+        else {
+            console.log("The data is coming from cache.")
+            this.bindLastPosts(data.items.filter(function (e) {
+                return e.categories.length > 0
+            }));
+        }
     }
 
-    replaceAll(s, replaceWhat, replaceTo){
+    replaceAll(s, replaceWhat, replaceTo) {
         var re = new RegExp(replaceWhat, 'g');
-        return s.replace(re,replaceTo);
+        return s.replace(re, replaceTo);
     }
 
     bindLastPosts(d) {
@@ -59,7 +76,7 @@ export default class Content extends React.Component {
                 <Row key={i}>
                     <MediaQuery query={global.minWidth}>
                         <Col xs={1} className='date'>
-                            <p>{date.getDate()}<br/>{months[date.getMonth()]}</p>
+                            <p>{date.getDate()}<br />{months[date.getMonth()]}</p>
                         </Col>
                         <Col xs={11}>
                             <Row className='body'>
@@ -90,8 +107,8 @@ export default class Content extends React.Component {
             boxSizing: 'border-box',
             margin: '0 3%',
             marginTop: '5%'
-        }
-        
+        };
+
         return (
             <div style={{ backgroundColor: global.primaryColor, height: '100%', width: '100%' }}>
                 <Title color={this.props.color} title={this.props.title} />
@@ -106,17 +123,6 @@ export default class Content extends React.Component {
                         {this.state.posts}
                     </div>
                 </MediaQuery>
-
-                <Row className='viewAll'>
-                    <Col xs={12}>
-                        <Row center='xs'>
-                            <Col className='text'><a href={mediumLink} target='_blank'>view all</a></Col>
-                            <Col className='arrow'>
-                                <a href={mediumLink} target='_blank'><FontAwesomeIcon icon={faLongArrowAltRight} size='2x'></FontAwesomeIcon></a>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
             </div>
         );
     }

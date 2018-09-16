@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,700');
 * {
     margin: 0;
     padding: 0;
@@ -98,7 +97,7 @@ a {
     font-size: 3.5em;
     font-family: 'Montserrat', sans-serif;
     padding-left: 10%;
-    margin-top: 5%;
+    margin-top: 3%;
     max-width: 50%;
 }
 .icon {
@@ -179,7 +178,8 @@ a {
 
 .post{
     box-sizing: border-box;
-    margin: 5% 5% 0 10%;
+    justify-content: center;
+    align-items: center;
 }
 
 .post .date{
@@ -197,10 +197,9 @@ a {
 
 .post .body {
     width: 100%;
-    padding: 5.25vh 30px;
+    padding: auto 30px;
     background: white;
     border-radius: 15px;
-    margin-bottom: 6vh;
 }
 
 .post .body a {
@@ -217,29 +216,4 @@ a {
 
 .post .body a:hover{
     color: #ffbd39;
-}
-
-.viewAll {
-    text-align: center;
-}
-
-.viewAll .text{
-    display: inline-block;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.viewAll .text a {
-    color: #333;
-    font-size: 1.25em;
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-}
-
-.viewAll .arrow a{
-    padding-left: 10px;
-    color: #333;
-    margin-top: auto;
-    margin-bottom: auto;
 }
