@@ -18,6 +18,10 @@ export default class Last extends React.Component {
         };
     }
 
+    divClicked(url) {
+        window.location.href = url;
+    }
+
     render() {
         const lastStyle = {
             backgroundColor: global.windowBackgrounColor,
@@ -36,51 +40,49 @@ export default class Last extends React.Component {
                             <Col xs={12}>
                                 <Row>
                                     <MediaQuery query={global.minWidth}>
-                                        <Col xs={7} className='email'>
-                                            <Diamond redirect='mailto:me@furkanbozdag.com'
-                                                height='80px'
-                                                width='80px'
-                                                backgroundColor='white'
-                                                color='#757575'
-                                                icon={faEnvelope}/>
+                                        <Col xs={2} className='email'>
+                                            <div onClick={() => this.divClicked('mailto:me@furkanbozdag.com')}>
+                                                <FontAwesomeIcon icon={faEnvelope} size='3x' />
+                                                <p>send email.</p>
+                                            </div>
                                         </Col>
-
+                                        <Col xs={5}></Col>
                                         <Col xs={5} className='social'>
                                             <Row>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.facebook.com/bozd4g/' alt='facebook' target='_blank'>
+                                                    <div onClick={() => this.divClicked('https://www.facebook.com/bozd4g/')}>
                                                         <FontAwesomeIcon className='icon facebook' icon={faFacebook} size='3x' />
-                                                    </a>
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.instagram.com/bozd4g/' alt='instagram' target='_blank'>
+                                                    <div onClick={() => this.divClicked('https://www.instagram.com/bozd4g/')}>
                                                         <FontAwesomeIcon className='icon instagram' icon={faInstagram} size='3x' />
-                                                    </a>
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.twitter.com/bozd4g/' alt='twitter' target='_blank'>
+                                                    <div onClick={() => this.divClicked('https://www.twitter.com/bozd4g/')}>
                                                         <FontAwesomeIcon className='icon twitter' icon={faTwitter} size='3x' />
-                                                    </a>
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.medium.com/@bozd4g/' alt='medium' target='_blank'>
+                                                    <div onClick={() => this.divClicked('https://www.medium.com/@bozd4g/')}>
                                                         <FontAwesomeIcon className='icon medium' icon={faMedium} size='3x' />
-                                                    </a>
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.linkedin.com/in/bozd4g/' alt='linkedin' target='_blank'>
+                                                    <div onClick={() => this.divClicked('https://www.linkedin.com/in/bozd4g/')}>
                                                         <FontAwesomeIcon className='icon linkedin' icon={faLinkedin} size='3x' />
-                                                    </a>
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://open.spotify.com/user/bozd4g/' alt='spotify' target='_blank'>
+                                                    <div onClick={() => this.divClicked('https://open.spotify.com/user/bozd4g/')}>
                                                         <FontAwesomeIcon className='icon spotify' icon={faSpotify} size='3x' />
-                                                    </a>
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='http://www.github.com/bozd4g/' alt='github' target='_blank'>
+                                                    <div onClick={() => this.divClicked('http://www.github.com/bozd4g/')}>
                                                         <FontAwesomeIcon className='icon github' icon={faGithub} size='3x' />
-                                                    </a>
+                                                    </div>
                                                 </Col>
                                             </Row>
                                         </Col>
@@ -89,44 +91,39 @@ export default class Last extends React.Component {
                                         <Col xs={12}>
                                             <Row center='xs'>
                                                 <Col xs className='icon'>
-                                                    <a href='mailto:me@furkanbozdag.com' alt='email' target='_blank'>
-                                                        <FontAwesomeIcon className='icon facebook' icon={faEnvelope} size='2x' />
-                                                    </a>
+                                                    <div onClick={() => this.divClicked('https://www.facebook.com/bozd4g/')}>
+                                                        <FontAwesomeIcon className='icon facebook' icon={faFacebook} size='3x' />
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.facebook.com/bozd4g/' alt='facebook' target='_blank'>
-                                                        <FontAwesomeIcon className='icon facebook' icon={faFacebook} size='2x' />
-                                                    </a>
+                                                    <div onClick={() => this.divClicked('https://www.instagram.com/bozd4g/')}>
+                                                        <FontAwesomeIcon className='icon instagram' icon={faInstagram} size='3x' />
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.instagram.com/bozd4g/' alt='instagram' target='_blank'>
-                                                        <FontAwesomeIcon className='icon instagram' icon={faInstagram} size='2x' />
-                                                    </a>
+                                                    <div onClick={() => this.divClicked('https://www.twitter.com/bozd4g/')}>
+                                                        <FontAwesomeIcon className='icon twitter' icon={faTwitter} size='3x' />
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.twitter.com/bozd4g/' alt='twitter' target='_blank'>
-                                                        <FontAwesomeIcon className='icon twitter' icon={faTwitter} size='2x' />
-                                                    </a>
+                                                    <div onClick={() => this.divClicked('https://www.medium.com/@bozd4g/')}>
+                                                        <FontAwesomeIcon className='icon medium' icon={faMedium} size='3x' />
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.medium.com/@bozd4g/' alt='medium' target='_blank'>
-                                                        <FontAwesomeIcon className='icon medium' icon={faMedium} size='2x' />
-                                                    </a>
+                                                    <div onClick={() => this.divClicked('https://www.linkedin.com/in/bozd4g/')}>
+                                                        <FontAwesomeIcon className='icon linkedin' icon={faLinkedin} size='3x' />
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://www.linkedin.com/in/bozd4g/' alt='linkedin' target='_blank'>
-                                                        <FontAwesomeIcon className='icon linkedin' icon={faLinkedin} size='2x' />
-                                                    </a>
+                                                    <div onClick={() => this.divClicked('https://open.spotify.com/user/bozd4g/')}>
+                                                        <FontAwesomeIcon className='icon spotify' icon={faSpotify} size='3x' />
+                                                    </div>
                                                 </Col>
                                                 <Col xs className='icon'>
-                                                    <a href='https://open.spotify.com/user/bozd4g/' alt='spotify' target='_blank'>
-                                                        <FontAwesomeIcon className='icon spotify' icon={faSpotify} size='2x' />
-                                                    </a>
-                                                </Col>
-                                                <Col xs className='icon'>
-                                                    <a href='http://www.github.com/bozd4g/' alt='github' target='_blank'>
-                                                        <FontAwesomeIcon className='icon github' icon={faGithub} size='2x' />
-                                                    </a>
+                                                    <div onClick={() => this.divClicked('http://www.github.com/bozd4g/')}>
+                                                        <FontAwesomeIcon className='icon github' icon={faGithub} size='3x' />
+                                                    </div>
                                                 </Col>
                                             </Row>
                                         </Col>
@@ -143,13 +140,13 @@ export default class Last extends React.Component {
                         <Col xs={12}>
                             <Row center='xs'>
                                 <MediaQuery query={global.minWidth}>
-                                    <Col xs={6} style={{color: '#757575'}}>
+                                    <Col xs={6} style={{ color: '#757575' }}>
                                         © copyright {this.state.currentYear} | all rights reserved
                                     </Col>
                                 </MediaQuery>
                                 <MediaQuery query={global.maxWidth}>
-                                    <Col xs={6} style={{color: '#757575'}}>
-                                        © copyright {this.state.currentYear}<br/>all rights reserved
+                                    <Col xs={6} style={{ color: '#757575' }}>
+                                        © copyright {this.state.currentYear}<br />all rights reserved
                                     </Col>
                                 </MediaQuery>
                             </Row>

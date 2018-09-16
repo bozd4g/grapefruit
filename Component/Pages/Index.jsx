@@ -26,7 +26,7 @@ export default class Index extends React.Component {
                     <Content title="what's happening?" color='white'></Content>
                 </div>
                 <div id='contact' style={container}>
-                    <Last title='contact with me.' color='#757575'></Last>
+                    <Last title="contact with me." color='#757575'></Last>
                 </div>
             </div>
         );

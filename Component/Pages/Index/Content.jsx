@@ -58,7 +58,7 @@ export default class Content extends React.Component {
         const mobileBody = {
             marginTop: '2vh',
             marginBottom: '2.5vh',
-            padding: '3vh 15px'
+            padding: '4vh 15px'
         };
         const mobileText = {
             fontSize: '1.25em',
@@ -112,10 +112,9 @@ export default class Content extends React.Component {
         return (
             <div style={{ backgroundColor: global.primaryColor, height: '100%', width: '100%' }}>
                 <Title color={this.props.color} title={this.props.title} />
-
                 <MediaQuery query={global.minWidth}>
                     <div className='post'>
-                        {this.state.posts}
+                        {this.state.posts} 
                     </div>
                 </MediaQuery>
                 <MediaQuery query={global.maxWidth}>

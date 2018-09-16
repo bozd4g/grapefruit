@@ -1,6 +1,7 @@
 import React from 'react';
-import {Row, Col} from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 import MediaQuery from 'react-responsive';
+import '../css/main.css';
 
 
 export default class Title extends React.Component {
@@ -10,19 +11,22 @@ export default class Title extends React.Component {
 
     render() {
         const mobileStyle = {
-            paddingLeft: '5%',
-            fontSize: '2.5em',
+            marginBottom: '-15%',
+            marginLeft: '2%',
+        };
+        const mobileTextStyle = {
+            fontSize: '3em',
             color: this.props.color
         };
-        
-        return(
+
+        return (
             <Row>
                 <Col md={5}>
                     <MediaQuery query={global.minWidth}>
-                        <h1 className='title' style={{color: this.props.color}}>{this.props.title}</h1>
+                        <div className='title'><h1 style={{color: this.props.color}}>{this.props.title}</h1></div>
                     </MediaQuery>
                     <MediaQuery query={global.maxWidth}>
-                        <h1 className='title' style={mobileStyle}>{this.props.title}</h1>
+                        <div className='title' style={mobileStyle}><h1 style={mobileTextStyle}>{this.props.title}</h1></div>
                     </MediaQuery>
                 </Col>
             </Row>

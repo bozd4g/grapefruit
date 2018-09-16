@@ -93,21 +93,27 @@ a {
 }
 
 .title {
-    display: block;
-    font-size: 3.5em;
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 10%;
-    margin-top: 3%;
+    margin-top: 2%;
+    margin-left: 10%;
+    max-height: 10%;
+    margin-bottom: -4%; /* max-height / 2 */
     max-width: 50%;
 }
+
+.title h1 {
+    font-size: 4em;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .icon {
     color: #757575;
     transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 
-.icon.default:hover {
+.icon:hover {
     color: #ffbd39;
 }
 
@@ -157,13 +163,30 @@ a {
 
 .footerContact .inner .email {
     float: left;
-    text-align: left;
+    color: #757575;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    cursor: pointer;
+    white-space: nowrap;
 } 
+
+.footerContact .inner .email p {
+    font-size: 1.75em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: inline-flex;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.footerContact .inner .email:hover {
+    color: #ffbd39;
+}
 
 .footerContact .inner .social {
     float: right;
     text-align: right;
-    margin-top: 4%;
 }
 
 .copyright {
@@ -177,9 +200,10 @@ a {
 }
 
 .post{
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
+    margin: 0 5% 0 10%;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
 }
 
 .post .date{
@@ -197,9 +221,10 @@ a {
 
 .post .body {
     width: 100%;
-    padding: auto 30px;
+    padding: 5vh 30px;
     background: white;
     border-radius: 15px;
+    margin: 1.5em 0;
 }
 
 .post .body a {
